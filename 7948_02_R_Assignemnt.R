@@ -5,7 +5,7 @@ library(lubridate)
 library(readr)
 
 
-sale_df = read_xlsx('C:/Users/satya.yalla/Documents/Tiger_Analytics_Learning_Path/Python_workspace/assignment/SaleData.xlsx')
+sale_df <- read_xlsx('C:/Users/satya.yalla/Documents/Tiger_Analytics_Learning_Path/Python_workspace/assignment/SaleData.xlsx')
 
 
 # Question 1
@@ -44,7 +44,7 @@ df <- sale_df %>%
 
 
 # Question 6
-total_amt = sum(sale_df$Sale_amt)
+total_amt <- sum(sale_df$Sale_amt)
 df <- sale_df %>% 
               group_by(Manager) %>%
               summarise(percent_sales=(sum(Sale_amt)/total_amt)*100)
@@ -80,7 +80,7 @@ df <- imdb_df %>%
 
 
 
-diamond_df = read.csv('C:/Users/satya.yalla/Documents/Tiger_Analytics_Learning_Path/Python_workspace/assignment/diamonds.csv')
+diamond_df <- read.csv('C:/Users/satya.yalla/Documents/Tiger_Analytics_Learning_Path/Python_workspace/assignment/diamonds.csv')
 
 
 # Question 11
@@ -104,7 +104,7 @@ select_if(diamond_df,is.numeric)
 
 
 # Question 14
-diamond_df$z = as.numeric(as.character(diamond_df$z))
+diamond_df$z <- as.numeric(as.character(diamond_df$z))
 
 diamond_df$volume[diamond_df$depth < 60] = 8
 depth_60 <- diamond_df$depth >= 60
